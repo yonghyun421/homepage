@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Courgette", cursive;
+  background-image: url(/images/water.jpg);
+  background-size: 100vw 200vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  padding: 8px 12px;
+  opacity: 75%;
+}
+
+.nav_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.nav_logo i {
+  color: black;
+}
+
+.nav_logo a {
+  margin-left: 10px;
+}
+
+.nav_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-right: 140px;
+}
+
+.nav_menu li {
+  padding: 8px 12px;
+}
+
+.nav_menu li:hover {
+  background-color: black;
+  border-radius: 4px;
+}
+
+.nav_icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+.nav_icons i {
+  padding: 8px 12px;
+}
+
+.nav_toggle {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav_toggle {
+    display: block;
+  }
+
+  .nav_menu.active,
+  .nav_icons.active {
+    display: flex;
+  }
+}
+
+/*  슬라이드 쇼 */
+
+#slideShow {
+  clear: both; /* 플로팅 해제 */
+  width: 250px; /* 너비 */
+  height: 250px;
+  border-radius: 50%;
+  border-radius: 50%; /* 높이 */
+  overflow: hidden; /* 영역 넘치면 감춤 */
+  position: relative;
+  display: inline-block;
+}
+#slides {
+  position: absolute;
+}
+#slides > img {
+  width: 100%; /* 너비 */
+  float: left; /* 가로로 배치 */
+}
+
+main {
+}
+
+#whoPic {
+}
+
+.about {
+  display: flex;
+  justify-content: initial;
+}
+
+#whoPic {
+  margin-right: 2vw;
+}
+
+#whoDesc {
+  margin: 2vh 10vw 5vh 5vw;
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: black;
+  line-height: 170%;
+}
+
+#whoPic img {
+  width: 40vw;
+  height: 50vh;
+  border-radius: 10%;
+  border-radius: 10%;
+}
+
+.me {
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  text-align: center;
+  margin-top: 30vh;
+  line-height: 250%;
+  animation: fadein 5s ease 3s;
+  -webkit-animation: fadein 3s;
+}
+
+.favorite {
+  margin: 50px 0;
+}
+
+#likePic {
+  text-align: center;
+}
+
+#likeThings h1 {
+  text-shadow: 3px 3px 3px black;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  padding-left: 15%;
+  margin: 50px 0;
+}
+
+#likePic > img {
+  width: 12em;
+  height: 12em;
+  margin: 15px 45px;
+  border-radius: 10%;
+  border-radius: 10%;
+}
+
+#desc {
+  display: flex;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  text-align: center;
+}
+
+.whoAmI > div > ul > li {
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: black;
+}
+
+#desc p {
+  font-family: "Nanum Brush Script", cursive;
+  width: 25%;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: black;
+  margin-top: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.pLanguage {
+  margin: 50px 0;
+}
+
+.pLanguage h1,
+.goal h1,
+.whoAmI h1,
+.contact h1 {
+  text-shadow: 3px 3px 3px black;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  padding-left: 15%;
+  margin: 50px 0;
+}
+
+#firstPage,
+#lName {
+  color: white;
+  text-align: center;
+  line-height: 250%;
+  padding: 8px 12px;
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#firstPage p,
+#lName p {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  color: white;
+  padding-left: 0;
+  margin: auto;
+  text-shadow: 3px 3px 3px black;
+  font-size: 2rem;
+}
+
+#myGoal {
+  display: flex;
+}
+
+#codePic {
+  margin-left: 2vw;
+  margin-right: 10vw;
+}
+
+#goalDesc {
+  margin: 8vh 2vw 5vh 12vw;
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: black;
+}
+
+#codePic img {
+  width: 40vw;
+  height: 40vh;
+  border-radius: 10%;
+  border-radius: 10%;
+}
+
+/* #goalDesc {
+  margin-right: 20%;
+} */
+
+footer {
+  width: 100%;
+  height: 12vh;
+  background-color: gray;
+  padding-top: 15px;
+  border-top: 2px;
+  opacity: 75%;
+  position: sticky;
+}
+
+#bottomMenu {
+  width: 100%;
+  height: 10%;
+}
+
+#bottomMenu ul {
+  margin-top: 1.3em;
+  margin-left: 32%;
+}
+
+#bottomMenu ul li {
+  list-style: none;
+  float: left;
+  padding: 5px 20px;
+  border-right: 1px solid #ddd;
+}
+
+#bottomMenu ul li:last-child {
+  border-right: none;
+}
+
+#bottomMenu li:hover {
+  background-color: black;
+  border-radius: 4px;
+}
+
+#bottomMenu ul li a,
+#bottomMenu ul li a:visited {
+  font-size: 15px;
+  color: white;
+}
+
+/*fadein*/
+
+.me {
+  width: 100%;
+  height: 80vh;
+}
+
+.whoAmI {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15%;
+}
+
+.favorite {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15%;
+}
+
+.pLanguage {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15%;
+}
+
+.goal {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10%;
+}
+
+.contact {
+  width: 100%;
+  height: 41em;
+}
+
+/* top 버튼 */
+
+#back-to-top {
+  font-family: "Courgette", cursive;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  text-shadow: 3px 3px 3px black;
+  color: white;
+  padding: 0.8em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  opacity: 1;
+}
+
+#back-to-top:hover {
+  font-family: "Courgette", cursive;
+  background-color: transparent;
+  color: black;
+  padding: 1em;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+}
+
+/* contact */
+
+.contact {
+  margin-top: 7%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+#map {
+  width: 60%;
+  height: 70%;
+  margin: 0 10% 3% 19%;
+  border-radius: 3%;
+  border-radius: 3%;
+}
+
+.address {
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 2em;
+  font-weight: 600;
+  color: black;
+}
+
+#gal img {
+  width: 100%;
+  height: 30%;
+}
+
+.work {
+  width: 100%;
+  height: 100%;
+  margin: 15% 0 13% 13%;
+}
+
+.work span {
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 20em;
+  font-weight: 600;
+  color: black;
+  margin-top: 20%;
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  margin: 3% 0 10% 22%;
+}
+
+.about span {
+  font-family: "Nanum Brush Script", cursive;
+  text-shadow: 0.1em 0.1em 0.1em white;
+  font-size: 20em;
+  font-weight: 600;
+  color: black;
+  margin-top: 15%;
+}
